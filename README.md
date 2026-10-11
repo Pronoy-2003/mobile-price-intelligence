@@ -93,32 +93,41 @@ mobile-price-intelligence/
 ├── data/
 │   ├── raw/
 │   │   ├── amazon_scraped_data.csv
+│   │   ├── amazon_scraped_data.json
 │   │   └── flipkart_scraped_data.csv
-│   └── processed/
-│       ├── amazon_cleaned.csv
-│       ├── flipkart_cleaned.csv
-│       ├── amazon_standardized.csv
-│       ├── flipkart_standardized.csv
-│       ├── final_mobile_price_comparison.csv
-│       ├── product_matching_report.csv
-│       └── final_mobile_price_comparison_eda.csv
-├── python/
-│   └── # Add the actual pipeline scripts here
-├── notebooks/
-│   └── mobile_price_eda.ipynb
-├── powerbi/
-│   └── mobile_price_intelligence.pbix
-├── images/
-│   ├── 01_market_price_comparison.png
-│   └── 02_competitive_insights.png
+│   ├── processed/
+│   │   ├── amazon_cleaned.csv
+│   │   ├── amazon_standardized.csv
+│   │   ├── flipkart_cleaned.csv
+│   │   ├── flipkart_standardized.csv
+│   │   ├── final_mobile_price_comparison.csv
+│   │   ├── final_mobile_price_comparison_eda.csv
+│   │   └── product_matching_report.csv
+│   └── .gitkeep
 ├── docs/
 │   ├── Project_Documentation.md
 │   ├── business_problem.md
 │   ├── data_dictionary.md
 │   └── methodology.md
-├── requirements.txt
+├── images/
+│   ├── 01_market_price_comparison.png
+│   └── 02_competitive_insights.png
+├── notebooks/
+│   └── mobile_price_eda.ipynb
+├── powerbi/
+│   └── mobile_price_intelligence.pbix
+├── python/
+│   ├── 01_amazon_scraper.py
+│   ├── 02_flipkart_scraper.py
+│   ├── 03_validate_data.py
+│   ├── 04_clean_data.py
+│   ├── 05_standardize_products.py
+│   ├── 06_product_matching.py
+│   └── __init__.py
 ├── .gitignore
-└── README.md
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
 Only include files that actually exist in your repository. Avoid committing generated or raw data if website terms or redistribution restrictions do not permit it.
