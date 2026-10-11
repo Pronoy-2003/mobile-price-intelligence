@@ -44,25 +44,35 @@ This document describes the principal fields used in the Mobile Price Intelligen
 
 The final comparison dataset contains **16 matched product variants** and platform-specific comparison metrics. It may use wide-format columns, with separate Amazon and Flipkart values on each row.
 
-| Field / common column name | Description | Data type | Notes |
+| Column Name | Description | Data Type | Notes |
 |---|---|---|---|
-| `product_name` / `ProductName` | Product/model identity used to compare listings | Text | One row represents a matched product variant. |
-| `brand` / `BrandName` | Brand associated with the matched product | Text | Used for brand-level summaries. |
-| `RAM_GB` / `RAM_GB` | RAM configuration, where available | Numeric / nullable | Matching may rely on other configuration fields when RAM is missing on both listings. |
-| `ROM_GB` / `ROM_GB` | Storage configuration, where available | Numeric / nullable | Helps distinguish product variants. |
-| `amazon_price` | Amazon current selling price | Numeric | INR. |
-| `flipkart_price` | Flipkart current selling price | Numeric | INR. |
-| `amazon_discount_pct` | Amazon listed discount percentage | Numeric / nullable | Average is calculated over non-missing Amazon values. |
-| `flipkart_discount_pct` | Flipkart listed discount percentage | Numeric / nullable | Average is calculated over non-missing Flipkart values. |
-| `amazon_rating` | Amazon listing rating | Numeric / nullable | Confirm exact field name in the final CSV. |
-| `flipkart_rating` | Flipkart listing rating | Numeric / nullable | Confirm exact field name in the final CSV. |
-| `amazon_reviews_count` / `amazon_review_count` | Amazon listing review count | Integer / nullable | Exact name may vary. |
-| `flipkart_reviews_count` / `flipkart_review_count` | Flipkart listing review count | Integer / nullable | Exact name may vary. |
+| `match_key` | Unique key used to match product variants across platforms | Text | Combines normalized product attributes for matching. |
+| `product_name` | Standardized product/model name | Text | Used to identify and compare the same product. |
+| `brand` | Product brand | Text | Used for brand-level analysis. |
+| `ram_gb` | RAM capacity in GB | Numeric / nullable | May be missing when RAM is not available in product titles. |
+| `rom_gb` | Storage capacity in GB | Numeric / nullable | Helps distinguish product variants. |
+| `amazon_price` | Current selling price on Amazon | Numeric | Price in INR. |
+| `amazon_mrp` | Listed maximum retail price on Amazon | Numeric / nullable | Missing when the listing does not provide MRP. |
+| `amazon_discount_pct` | Discount percentage on Amazon | Numeric / nullable | Calculated from MRP and current price during cleaning. |
+| `amazon_rating` | Customer rating on Amazon | Numeric / nullable | Typically on a 0–5 scale. |
+| `amazon_review_count` | Number of customer reviews on Amazon | Integer / nullable | Extracted from the product listing. |
+| `amazon_availability` | Product availability on Amazon | Text | Standardized availability category. |
+| `amazon_product_url` | Amazon product page URL | Text | Used to identify and verify the listing. |
+| `amazon_scrape_at` | Date and time the Amazon listing was scraped | DateTime | Records the data collection timestamp. |
+| `flipkart_price` | Current selling price on Flipkart | Numeric | Price in INR. |
+| `flipkart_mrp` | Listed maximum retail price on Flipkart | Numeric / nullable | Missing when the listing does not provide MRP. |
+| `flipkart_discount_pct` | Discount percentage on Flipkart | Numeric / nullable | Calculated from MRP and current price during cleaning. |
+| `flipkart_rating` | Customer rating on Flipkart | Numeric / nullable | Typically on a 0–5 scale. |
+| `flipkart_review_count` | Number of customer reviews on Flipkart | Integer / nullable | Extracted from the product listing. |
+| `flipkart_availability` | Product availability on Flipkart | Text | Standardized availability category. |
+| `flipkart_product_url` | Flipkart product page URL | Text | Used to identify and verify the listing. |
+| `flipkart_scrape_at` | Date and time the Flipkart listing was scraped | DateTime | Records the data collection timestamp. |
 | `price_difference` | Amazon price minus Flipkart price | Numeric | Positive means Amazon is more expensive; negative means Amazon is cheaper. |
-| `absolute_price_gap` / `absolute_price_difference` | Absolute value of the price difference | Numeric | Measures the size of the difference, not its direction. |
-| `cheaper_platform` | Platform with the lower current selling price | Text | Expected categories: `Amazon`, `Flipkart`, or `Same`. |
-| `discount_difference` | Amazon discount percentage minus Flipkart discount percentage | Numeric / nullable | Positive means Amazon's listed discount is higher; negative means Flipkart's is higher. |
-| `higher_discount_platform` | Platform with the higher listed discount | Text / nullable | `Amazon`, `Flipkart`, or `Same`; meaningful only where both discounts are available. |
+| `absolute_price_difference` | Absolute value of the price difference | Numeric | Measures the size of the price gap regardless of direction. |
+| `cheaper_platform` | Platform with the lower current selling price | Text | Values: `Amazon`, `Flipkart`, or `Same Price`. |
+| `discount_difference` | Amazon discount percentage minus Flipkart discount percentage | Numeric / nullable | Positive means Amazon's discount is higher; negative means Flipkart's is higher. |
+| `rating_difference` | Amazon rating minus Flipkart rating | Numeric / nullable | Positive means Amazon has the higher rating; negative means Flipkart has the higher rating. |
+| `review_difference` | Amazon review count minus Flipkart review count | Numeric / nullable | Positive means Amazon has more reviews; negative means Flipkart has more reviews. |
 
 ## 4. Power BI Model Fields
 
