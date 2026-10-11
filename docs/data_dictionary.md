@@ -29,16 +29,16 @@ This document describes the principal fields used in the Mobile Price Intelligen
 | Field / common column name | Description | Data type | Notes |
 |---|---|---|---|
 | `product_name` | Normalized product/model name used for analysis | Text | Derived from the raw title; verify against the actual standardized file. |
-| `brand` / `BrandName` | Standardized brand name | Text | Used for grouping and matching. |
-| `RAM_GB` / `ram_gb` | RAM capacity extracted from the product title | Numeric / nullable | May be unavailable, especially where titles do not state RAM. |
-| `ROM_GB` / `rom_gb` / `storage_gb` | Internal storage capacity extracted from the product title | Numeric / nullable | Naming varies by processing stage; verify the actual headers. |
+| `brand`  | Standardized brand name | Text | Used for grouping and matching. |
+| `ram_gb` | RAM capacity extracted from the product title | Numeric / nullable | May be unavailable, especially where titles do not state RAM. |
+| `rom_gb` | Internal storage capacity extracted from the product title | Numeric / nullable | Naming varies by processing stage; verify the actual headers. |
 | `platform` | Marketplace associated with the standardized listing | Text | Used to distinguish Amazon from Flipkart. |
 | `current_price` | Cleaned current selling price | Numeric | INR. |
-| `MRP` / `mrp` | Cleaned list price | Numeric / nullable | Null when the source did not provide a usable value. |
-| `DiscountPct` / `discount_pct` | Discount percentage used in Power BI or analysis | Numeric / nullable | In this project, values such as `13.8` represent 13.8%, not `0.138`. Format carefully to avoid multiplying by 100 twice. |
-| `Rating` / `rating` | Cleaned listing rating | Numeric / nullable | Missing values should remain blank. |
-| `ReviewCount` / `review_count` | Cleaned review count | Integer / nullable | Check parsing and missing values before analysis. |
-| `Availability` / `availability` | Cleaned availability status | Text / nullable | Reflects the captured listing, not guaranteed current stock. |
+| `mrp` | Cleaned list price | Numeric / nullable | Null when the source did not provide a usable value. |
+| `discount_pct` | Discount percentage used in Power BI or analysis | Numeric / nullable | In this project, values such as `13.8` represent 13.8%, not `0.138`. Format carefully to avoid multiplying by 100 twice. |
+| `rating` | Cleaned listing rating | Numeric / nullable | Missing values should remain blank. |
+| `review_count` | Cleaned review count | Integer / nullable | Check parsing and missing values before analysis. |
+| `availability` | Cleaned availability status | Text / nullable | Reflects the captured listing, not guaranteed current stock. |
 
 ## 3. Final Matched Comparison Dataset
 
