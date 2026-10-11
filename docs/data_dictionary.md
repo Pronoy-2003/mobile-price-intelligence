@@ -83,10 +83,10 @@ The Power BI report uses a star-schema-style model with product and platform dim
 | Field | Description |
 |---|---|
 | `ProductKey` | Product key used to relate product variants to fact rows. |
-| `BrandName` / `Brand` | Product brand. |
+| `BrandName`  | Product brand. |
 | `ProductName` | Standardized product name. |
 | `RAM_GB` | RAM configuration, where available. |
-| `ROM_GB` / `Storage_GB` | Storage configuration, where available. |
+| `ROM_GB` | Storage configuration, where available. |
 
 ### `DimPlatform`
 
