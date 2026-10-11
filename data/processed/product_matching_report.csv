@@ -1,0 +1,13 @@
+platform,product_name,brand,ram_gb,rom_gb,current_price,mrp,discount_pct,rating,review_count,availability,match_status
+Amazon,Apple iPhone 17,Apple,,512,133399,,,5,,Unknown,Amazon variant not matched
+Amazon,OnePlus 15,OnePlus,16,512,93999,96999,3.09,4.6,985,In Stock,Amazon variant not matched
+Amazon,OnePlus 15R,OnePlus,12,256,59999,61000,1.64,4.5,1818,In Stock,Amazon variant not matched
+Amazon,realme GT 7T,realme,12,256,40750,42999,5.23,4.3,838,In Stock,Amazon variant not matched
+Amazon,realme 16 Pro,realme,12,256,49999,69999,28.57,4.5,201,In Stock,Amazon variant not matched
+Amazon,realme P4,realme,8,128,30983,45999,32.64,3.1,4,In Stock,Amazon variant not matched
+Flipkart,Apple iPhone 17,Apple,,256,99900,,,4.6,28706,In Stock,Flipkart variant not matched
+Flipkart,OnePlus 15,OnePlus,12,256,84899,89999,5.67,4.7,166,In Stock,Flipkart variant not matched
+Flipkart,OnePlus 15R,OnePlus,12,512,59899,59999,0.17,4.6,1524,Unavailable,Flipkart variant not matched
+Flipkart,realme GT 7T,realme,8,256,34999,39999,12.5,4.3,2814,Unavailable,Flipkart variant not matched
+Flipkart,realme 16 Pro,realme,8,128,31999,34999,8.57,4.3,2847,Unavailable,Flipkart variant not matched
+Flipkart,realme P4,realme,8,256,29999,33999,11.77,4.4,23674,In Stock,Flipkart variant not matched
