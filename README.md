@@ -132,16 +132,8 @@ git clone <your-github-repository-url>
 cd mobile-price-intelligence
 ```
 
-### 2. Create and activate a virtual environment
 
-**Windows PowerShell:**
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Install dependencies
+### 2. Install dependencies
 
 If `requirements.txt` is present:
 
@@ -151,11 +143,11 @@ pip install -r requirements.txt
 
 If you do not have a requirements file yet, create one from the packages actually used by your scripts and notebook. Do not add guessed dependencies.
 
-### 4. Run the analysis
+### 3. Run the analysis
 
 Run the Python pipeline scripts in their documented order, then open `notebooks/mobile_price_eda.ipynb` in Jupyter Notebook or JupyterLab. Use the paths configured in the scripts, and confirm that the required input CSV files are available.
 
-### 5. Open the dashboard
+### 4. Open the dashboard
 
 Open `powerbi/mobile_price_intelligence.pbix` in Power BI Desktop. The report uses a product dimension, a platform dimension, and a product-platform fact table.
 
