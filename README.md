@@ -17,8 +17,8 @@
 - [How to Run This Project](#how-to-run-this-project)
 - [Results and Conclusion](#results-and-conclusion)
 - [Future Work](#future-work)
-- [Author and Contact](#author-and-contact)
 - [GitHub Repository Structure](#github-repository-structure)
+- [Author and Contact](#author-and-contact)
 
 ## Overview
 
