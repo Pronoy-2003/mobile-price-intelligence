@@ -228,7 +228,7 @@ mobile-price-intelligence/
 
 > Repository structure reflects the project files currently documented for this repository. If you rename or remove files, update this tree to match the actual GitHub contents.
 
----
+
 
 ## Author and Contact
 
