@@ -93,7 +93,7 @@ The following findings describe this captured sample only; they should not be in
 
 **Discount interpretation:** The platform-level averages use all valid values available for each platform. For an apples-to-apples paired discount comparison, use only the 11 matched products with a valid discount on both platforms. Missing discounts are unknown, not zero.
 
-## Dashboard, Model, and Output
+## Dashboard
 
 ### Page 1 — Market Price Comparison
 
@@ -135,16 +135,7 @@ git clone https://github.com/Pronoy-2003/mobile-price-intelligence.git
 cd mobile-price-intelligence
 ```
 
-### 2. Create and activate a virtual environment
-
-**Windows PowerShell:**
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -153,7 +144,7 @@ playwright install chromium
 
 The browser installation is required for the Playwright-based scraper.
 
-### 4. Run the Python pipeline
+### 3. Run the Python pipeline
 
 Run the scripts from the repository root, in this order:
 
@@ -168,11 +159,11 @@ python python/06_product_matching.py
 
 The scraper scripts may access live websites, and website layouts or access rules can change. Respect each website's terms and access restrictions. If you only want to review the existing analysis, use the committed processed datasets and notebook instead of rerunning the scrapers.
 
-### 5. Run the EDA notebook
+### 4. Run the EDA notebook
 
 Open `notebooks/mobile_price_eda.ipynb` in Jupyter Notebook or JupyterLab and run the cells in order. Confirm that the required processed CSV files are present.
 
-### 6. Open the Power BI report
+### 5. Open the Power BI report
 
 Open `powerbi/mobile_price_intelligence.pbix` in Power BI Desktop. If prompted, update data source paths to match your local repository location and refresh the data.
 
@@ -190,13 +181,6 @@ These results apply only to the 16 matched variants in a single-day snapshot. Th
 4. Add more e-commerce platforms for broader price comparisons.
 5. Automate data collection, validation, and dashboard refreshes.
 
-## Author and Contact
-
-**Author:** Pronoy Sonowal
-
-- **GitHub:** [Pronoy-2003](https://github.com/Pronoy-2003)
-- **Project Repository:** [mobile-price-intelligence](https://github.com/Pronoy-2003/mobile-price-intelligence)
-- **LinkedIn:** Add your LinkedIn profile URL here.
 
 ## GitHub Repository Structure
 
@@ -243,6 +227,16 @@ mobile-price-intelligence/
 ```
 
 > Repository structure reflects the project files currently documented for this repository. If you rename or remove files, update this tree to match the actual GitHub contents.
+
+---
+
+## Author and Contact
+
+**Author:** Pronoy Pryunkush Sonowal
+
+-   **GitHub:** https://github.com/Pronoy-2003
+-   **LinkedIn:** www.linkedin.com/in/pronoy-pryunkush-sonowal
+-   **Email:** pronoypryunkushsonowal2002@gmail.com
 
 ---
 
